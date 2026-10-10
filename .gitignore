@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+node_modules/
+.next/
+out/
+static/
+.venv/
+venv/
+.git.old/
+.wrangler/
