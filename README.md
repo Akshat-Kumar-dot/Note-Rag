@@ -15,6 +15,8 @@ the question, it says so instead of making something up.
 Answers come from **Gemma 4** (`gemma-4-26b-a4b-it`), Google's open-weights
 model, through the Gemini API.
 
+**Live demo:** https://notes-rag.akshat-kumar-singh05.workers.dev
+
 ## Features
 
 - **Ask AI**: answers streamed back with numbered citations to your passages.
@@ -158,6 +160,8 @@ frontend/
 ## Team
 
 - Akshat Kumar ([@Akshat-Kumar-dot](https://github.com/Akshat-Kumar-dot))
+- Kuresh Raj ([@Kureshraj](https://github.com/Kureshraj))
+- Neel Patel ([@neel5239](https://github.com/neel5239))
 
 ## License
 
