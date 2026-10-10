@@ -1,0 +1,32 @@
+// Cloudflare Worker: the frontend (static files) plus an /api proxy to Render.
+// Deploy from frontend/:   npm run deploy      (= next build && wrangler deploy)
+{
+  "name": "notes-rag",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    // `next build` writes the static site here (output: "export").
+    "directory": "./out",
+    "binding": "ASSETS",
+    // /app is served from app.html, and unknown paths get Next's 404 page.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    // Only API calls start the Worker script; pages and files are served
+    // straight from Cloudflare's asset storage, without a Worker invocation.
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    // Your Render service's address, with no trailing slash.
+    "API_ORIGIN": "https://notes-rag.onrender.com/"
+  },
+  // Preview builds: every branch except main gets its own preview URL. There is
+  // no separate staging server, so previews talk to the live one (live data).
+  // Google sign-in only returns to the main address, so on a preview use the
+  // free trial instead.
+  "previews": {
+    "vars": {
+      "API_ORIGIN": "https://notes-rag.onrender.com/"
+    }
+  }
+  // PROXY_SECRET is a secret, not a var:   npx wrangler secret put PROXY_SECRET
+}
