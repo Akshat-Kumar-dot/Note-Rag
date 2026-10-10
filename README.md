@@ -160,6 +160,8 @@ frontend/
 ## Team
 
 - Akshat Kumar ([@Akshat-Kumar-dot](https://github.com/Akshat-Kumar-dot))
+- Kuresh Raj ([@kuresh-username](https://github.com/kuresh-username))
+- Neel Patel ([@neel-username](https://github.com/neel-username))
 
 ## License
 
